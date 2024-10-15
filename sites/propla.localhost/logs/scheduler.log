@@ -1,0 +1,206 @@
+2024-10-09 14:54:00,078 ERROR scheduler Exception in Enqueue Events for Site propla.localhost
+Traceback (most recent call last):
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/utils/scheduler.py", line 75, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/utils/scheduler.py", line 130, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/__init__.py", line 1367, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/model/meta.py", line 63, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/model/meta.py", line 117, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/model/document.py", line 126, in __init__
+    self.load_from_db()
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/model/meta.py", line 123, in load_from_db
+    super().load_from_db()
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/model/document.py", line 172, in load_from_db
+    frappe.throw(
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/__init__.py", line 652, in throw
+    msgprint(
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/__init__.py", line 617, in msgprint
+    _raise_exception()
+  File "/home/sanjana/propla-bench/apps/frappe/frappe/__init__.py", line 568, in _raise_exception
+    raise exc
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+2024-10-11 07:17:14,651 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for propla.localhost
+2024-10-11 07:17:14,959 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for propla.localhost
+2024-10-11 07:17:15,085 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for propla.localhost
+2024-10-11 07:17:15,126 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for propla.localhost
+2024-10-11 07:17:15,345 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for propla.localhost
+2024-10-11 07:17:15,977 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for propla.localhost
+2024-10-11 07:17:16,133 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for propla.localhost
+2024-10-11 07:17:16,507 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for propla.localhost
+2024-10-11 07:17:17,018 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for propla.localhost
+2024-10-11 07:17:17,296 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for propla.localhost
+2024-10-11 07:17:17,651 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for propla.localhost
+2024-10-11 07:17:17,678 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_quotation.supplier_quotation.set_expired_status because it was found in queue for propla.localhost
+2024-10-11 07:17:17,687 ERROR scheduler Skipped queueing erpnext.selling.doctype.quotation.quotation.set_expired_status because it was found in queue for propla.localhost
+2024-10-11 07:17:17,710 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for propla.localhost
+2024-10-11 07:17:17,884 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for propla.localhost
+2024-10-11 07:17:17,939 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for propla.localhost
+2024-10-11 07:17:18,080 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for propla.localhost
+2024-10-11 07:17:18,142 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for propla.localhost
+2024-10-11 07:17:18,908 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for propla.localhost
+2024-10-11 07:17:19,228 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for propla.localhost
+2024-10-11 07:17:19,255 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for propla.localhost
+2024-10-11 07:17:19,309 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for propla.localhost
+2024-10-11 07:17:19,354 ERROR scheduler Skipped queueing erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history because it was found in queue for propla.localhost
+2024-10-11 07:17:19,482 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for propla.localhost
+2024-10-11 07:17:20,354 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for propla.localhost
+2024-10-11 07:17:20,436 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for propla.localhost
+2024-10-11 07:17:20,497 ERROR scheduler Skipped queueing erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year because it was found in queue for propla.localhost
+2024-10-11 07:17:20,673 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for propla.localhost
+2024-10-11 07:17:20,813 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for propla.localhost
+2024-10-11 07:17:20,867 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for propla.localhost
+2024-10-11 07:17:20,923 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for propla.localhost
+2024-10-11 07:17:21,150 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for propla.localhost
+2024-10-11 07:17:21,591 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for propla.localhost
+2024-10-11 07:17:22,100 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for propla.localhost
+2024-10-11 07:17:22,454 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for propla.localhost
+2024-10-11 07:17:22,588 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for propla.localhost
+2024-10-11 07:17:22,766 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for propla.localhost
+2024-10-11 07:17:22,793 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_payment_reconciliation.process_payment_reconciliation.trigger_reconciliation_for_queued_docs because it was found in queue for propla.localhost
+2024-10-11 07:17:22,816 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for propla.localhost
+2024-10-11 07:17:25,216 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for propla.localhost
+2024-10-11 07:17:25,247 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for propla.localhost
+2024-10-11 07:17:25,476 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for propla.localhost
+2024-10-11 07:17:25,858 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for propla.localhost
+2024-10-11 07:17:25,877 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for propla.localhost
+2024-10-11 07:17:25,968 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for propla.localhost
+2024-10-11 07:17:26,167 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for propla.localhost
+2024-10-11 07:17:26,433 ERROR scheduler Skipped queueing frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points because it was found in queue for propla.localhost
+2024-10-11 07:17:26,662 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for propla.localhost
+2024-10-11 07:17:26,705 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.remove_unverified_record because it was found in queue for propla.localhost
+2024-10-11 07:17:26,736 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_daily_alerts because it was found in queue for propla.localhost
+2024-10-11 07:17:26,751 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for propla.localhost
+2024-10-11 07:17:26,858 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for propla.localhost
+2024-10-11 07:17:26,937 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for propla.localhost
+2024-10-11 07:17:26,983 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for propla.localhost
+2024-10-11 07:17:27,106 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for propla.localhost
+2024-10-11 07:17:27,218 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for propla.localhost
+2024-10-11 07:17:27,323 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for propla.localhost
+2024-10-11 07:17:27,446 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for propla.localhost
+2024-10-11 07:17:27,550 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for propla.localhost
+2024-10-11 07:17:27,779 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for propla.localhost
+2024-10-11 07:17:27,986 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for propla.localhost
+2024-10-11 07:17:28,019 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for propla.localhost
+2024-10-11 07:17:28,097 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for propla.localhost
+2024-10-11 07:17:28,367 ERROR scheduler Skipped queueing frappe.core.doctype.log_settings.log_settings.run_log_clean_up because it was found in queue for propla.localhost
+2024-10-11 07:17:28,798 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for propla.localhost
+2024-10-11 07:17:29,343 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for propla.localhost
+2024-10-11 07:17:29,429 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for propla.localhost
+2024-10-11 07:17:29,659 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for propla.localhost
+2024-10-11 07:17:30,005 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for propla.localhost
+2024-10-11 07:17:30,059 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for propla.localhost
+2024-10-11 07:17:30,084 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for propla.localhost
+2024-10-11 07:17:30,415 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for propla.localhost
+2024-10-11 07:18:37,934 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for propla.localhost
+2024-10-11 07:18:37,951 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for propla.localhost
+2024-10-11 07:18:38,087 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for propla.localhost
+2024-10-11 07:18:38,244 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for propla.localhost
+2024-10-11 07:18:38,259 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for propla.localhost
+2024-10-11 07:18:38,283 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for propla.localhost
+2024-10-11 07:18:38,396 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for propla.localhost
+2024-10-11 07:18:38,431 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for propla.localhost
+2024-10-11 07:18:38,469 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for propla.localhost
+2024-10-11 07:18:38,512 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for propla.localhost
+2024-10-11 07:18:38,614 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for propla.localhost
+2024-10-11 07:18:38,619 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_quotation.supplier_quotation.set_expired_status because it was found in queue for propla.localhost
+2024-10-11 07:18:38,669 ERROR scheduler Skipped queueing erpnext.selling.doctype.quotation.quotation.set_expired_status because it was found in queue for propla.localhost
+2024-10-11 07:18:38,733 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for propla.localhost
+2024-10-11 07:18:38,772 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for propla.localhost
+2024-10-11 07:18:38,780 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for propla.localhost
+2024-10-11 07:18:38,820 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for propla.localhost
+2024-10-11 07:18:38,849 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for propla.localhost
+2024-10-11 07:18:38,874 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for propla.localhost
+2024-10-11 07:18:38,911 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for propla.localhost
+2024-10-11 07:18:38,930 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for propla.localhost
+2024-10-11 07:18:39,008 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for propla.localhost
+2024-10-11 07:18:39,143 ERROR scheduler Skipped queueing erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history because it was found in queue for propla.localhost
+2024-10-11 07:18:39,208 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for propla.localhost
+2024-10-11 07:18:39,230 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for propla.localhost
+2024-10-11 07:18:39,278 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for propla.localhost
+2024-10-11 07:18:39,303 ERROR scheduler Skipped queueing erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year because it was found in queue for propla.localhost
+2024-10-11 07:18:39,321 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for propla.localhost
+2024-10-11 07:18:39,349 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for propla.localhost
+2024-10-11 07:18:39,425 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for propla.localhost
+2024-10-11 07:18:39,460 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for propla.localhost
+2024-10-11 07:18:39,513 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for propla.localhost
+2024-10-11 07:18:39,576 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for propla.localhost
+2024-10-11 07:18:39,590 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for propla.localhost
+2024-10-11 07:18:39,673 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for propla.localhost
+2024-10-11 07:18:39,697 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for propla.localhost
+2024-10-11 07:18:39,720 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for propla.localhost
+2024-10-11 07:18:39,736 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_payment_reconciliation.process_payment_reconciliation.trigger_reconciliation_for_queued_docs because it was found in queue for propla.localhost
+2024-10-11 07:18:39,888 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for propla.localhost
+2024-10-11 07:18:40,087 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for propla.localhost
+2024-10-11 07:18:40,099 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for propla.localhost
+2024-10-11 07:18:40,113 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for propla.localhost
+2024-10-11 07:18:40,124 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for propla.localhost
+2024-10-11 07:18:40,143 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for propla.localhost
+2024-10-11 07:18:40,157 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for propla.localhost
+2024-10-11 07:18:40,175 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for propla.localhost
+2024-10-11 07:18:40,287 ERROR scheduler Skipped queueing frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points because it was found in queue for propla.localhost
+2024-10-11 07:18:40,302 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for propla.localhost
+2024-10-11 07:18:40,311 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.remove_unverified_record because it was found in queue for propla.localhost
+2024-10-11 07:18:40,328 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_daily_alerts because it was found in queue for propla.localhost
+2024-10-11 07:18:40,353 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for propla.localhost
+2024-10-11 07:18:40,392 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for propla.localhost
+2024-10-11 07:18:40,418 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for propla.localhost
+2024-10-11 07:18:40,463 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for propla.localhost
+2024-10-11 07:18:40,483 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for propla.localhost
+2024-10-11 07:18:40,522 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for propla.localhost
+2024-10-11 07:18:40,542 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for propla.localhost
+2024-10-11 07:18:40,557 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for propla.localhost
+2024-10-11 07:18:40,569 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for propla.localhost
+2024-10-11 07:18:40,575 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for propla.localhost
+2024-10-11 07:18:40,580 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for propla.localhost
+2024-10-11 07:18:40,619 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for propla.localhost
+2024-10-11 07:18:40,656 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for propla.localhost
+2024-10-11 07:18:40,665 ERROR scheduler Skipped queueing frappe.core.doctype.log_settings.log_settings.run_log_clean_up because it was found in queue for propla.localhost
+2024-10-11 07:18:40,675 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for propla.localhost
+2024-10-11 07:18:40,682 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for propla.localhost
+2024-10-11 07:18:40,697 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for propla.localhost
+2024-10-11 07:18:40,705 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for propla.localhost
+2024-10-11 07:18:40,729 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for propla.localhost
+2024-10-11 07:18:40,751 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for propla.localhost
+2024-10-11 07:18:40,781 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for propla.localhost
+2024-10-11 07:18:40,807 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for propla.localhost
+2024-10-11 07:19:42,574 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for propla.localhost
+2024-10-11 07:19:42,639 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for propla.localhost
+2024-10-11 07:19:42,695 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for propla.localhost
+2024-10-11 07:19:42,720 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for propla.localhost
+2024-10-11 07:19:42,745 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for propla.localhost
+2024-10-11 07:19:42,756 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for propla.localhost
+2024-10-11 07:19:42,826 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for propla.localhost
+2024-10-11 07:19:43,230 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for propla.localhost
+2024-10-11 07:19:43,260 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for propla.localhost
+2024-10-11 07:19:43,287 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for propla.localhost
+2024-10-11 07:19:43,321 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for propla.localhost
+2024-10-11 07:19:43,569 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for propla.localhost
+2024-10-11 07:19:43,583 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for propla.localhost
+2024-10-11 07:19:43,599 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for propla.localhost
+2024-10-11 07:19:43,864 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for propla.localhost
+2024-10-11 07:19:43,977 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for propla.localhost
+2024-10-11 07:19:44,034 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for propla.localhost
+2024-10-11 07:19:44,084 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for propla.localhost
+2024-10-11 07:19:44,098 ERROR scheduler Skipped queueing frappe.core.doctype.log_settings.log_settings.run_log_clean_up because it was found in queue for propla.localhost
+2024-10-11 07:19:44,104 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for propla.localhost
+2024-10-11 07:19:44,109 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for propla.localhost
+2024-10-11 07:19:44,114 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for propla.localhost
+2024-10-11 07:19:44,119 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for propla.localhost
+2024-10-11 07:19:44,125 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for propla.localhost
+2024-10-11 07:19:44,132 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for propla.localhost
+2024-10-11 07:19:44,144 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for propla.localhost
+2024-10-11 07:19:44,156 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for propla.localhost
+2024-10-11 08:01:17,754 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for propla.localhost

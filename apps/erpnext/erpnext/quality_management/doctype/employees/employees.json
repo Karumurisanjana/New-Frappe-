@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:lastname",
+ "creation": "2024-10-11 07:24:21.526564",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "firstname",
+  "lastname",
+  "email",
+  "password"
+ ],
+ "fields": [
+  {
+   "fieldname": "firstname",
+   "fieldtype": "Data",
+   "label": "FirstName"
+  },
+  {
+   "fieldname": "lastname",
+   "fieldtype": "Data",
+   "label": "LastName",
+   "unique": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-11 07:30:10.465529",
+ "modified_by": "Administrator",
+ "module": "Quality Management",
+ "name": "Employees",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

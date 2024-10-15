@@ -1,0 +1,3 @@
+2024-10-09 16:09:37,478 ERROR frappe New Exception collected in error log
+Site: propla.localhost
+Form Dict: {'fid': 'fe4955c0f1', 'dt': 'Website Settings', 'dn': 'Website Settings', 'cmd': 'frappe.desk.form.utils.remove_attach'}

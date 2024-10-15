@@ -1,0 +1,6 @@
+{
+ "db_name": "propladb",
+ "db_password": "1234",
+ "db_type": "mariadb",
+ "encryption_key": "de6uLfo1LXMfcBP118i9bpVRUWEcf6QWp8_Jh9pSpoM="
+}

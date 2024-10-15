@@ -1,0 +1,6 @@
+{
+ "db_name": "newbiedb",
+ "db_password": "2345",
+ "db_type": "mariadb",
+ "encryption_key": "wsBUP3QweF5NKAqaS7pwqeiBfLdH0GJ1cqZ7wfxgYVQ="
+}
